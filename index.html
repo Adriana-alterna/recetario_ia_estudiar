@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA para Aprender - Infografía</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --color-orange: #FF6B35;
+            --color-gray: #9CA3AF;
+            --color-white: #FFFFFF;
+            --accent-orange: #FF8C42;
+            --accent-green: #10B981;
+            --accent-blue: #3B82F6;
+            --accent-purple: #8B5CF6;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--color-white);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .main-title {
+            color: var(--color-orange);
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(255, 107, 53, 0.3);
+        }
+        
+        .section-title {
+            color: var(--color-orange);
+            font-weight: 700;
+            border-left: 5px solid var(--color-orange);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .subtitle {
+            color: var(--color-gray);
+            font-weight: 600;
+        }
+        
+        .text-content {
+            color: var(--color-white);
+        }
+        
+        .step-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-orange);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+        
+        .step-number {
+            background: var(--color-orange);
+            color: var(--bg-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .example-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid var(--accent-green);
+        }
+        
+        .bad-example {
+            border-left-color: #EF4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+        
+        .good-example {
+            border-left-color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .icon-large {
+            font-size: 2.5rem;
+            color: var(--color-orange);
+            margin-bottom: 15px;
+        }
+        
+        .flow-arrow {
+            color: var(--color-orange);
+            font-size: 2rem;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .tech-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .formula-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+            border: 2px solid var(--accent-purple);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .resource-card {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
+            margin: 50px 0;
+            border-radius: 2px;
+        }
+        
+        .highlight-text {
+            background: linear-gradient(135deg, var(--color-orange), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+        
+        .code-snippet {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="text-center py-5">
+            <h1 class="main-title display-3 mb-3 animate__animated animate__fadeInDown">
+                <i class="fas fa-brain me-3"></i>
+                IA para Aprender
+            </h1>
+            <p class="subtitle h4">Domina el arte del prompt crafting y convierte la IA en tu copiloto de aprendizaje</p>
+        </div>
+<br>
+<br>
+<br>
+        <!-- Sección 1: Fundamentos -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="section-title h2">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    ¿Qué es un Prompt y Por Qué Importa?
+                </h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-comments icon-large"></i>
+                            <h3 class="subtitle h4">Definición Simple</h3>
+                            <p class="text-content">Un prompt es una <span class="highlight-text">instrucción clara</span> que le das a la IA para obtener respuestas útiles y precisas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-user-graduate icon-large"></i>
+                            <h3 class="subtitle h4">Analogía</h3>
+                            <p class="text-content">Como hablar con un <span class="highlight-text">tutor experto</span> que entiende muchos temas pero necesita contexto claro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="example-box bad-example">
+                            <h5><i class="fas fa-times me-2"></i>Mal Ejemplo</h5>
+                            <p class="mb-0">"Explícame PCA"</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="example-box good-example">
+                            <h5><i class="fas fa-check me-2"></i>Buen Ejemplo</h5>
+                            <p class="mb-0">"Explícame PCA como si tuviera conocimientos básicos de estadística, con ejemplos visuales y aplicaciones en ciencia de datos"</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Definición Formal -->
+                <div class="mt-5">
+                    <div class="formula-box">
+                        <h4 class="subtitle mb-3"><i class="fas fa-book me-2"></i>Definición Formal</h4>
+                        <p class="text-content mb-0">
+                            Un <strong>prompt</strong> es una estructura textual diseñada para guiar la generación de contenido 
+                            por parte de un modelo de inteligencia artificial generativa. Su función es <strong>proporcionar instrucciones</strong>
+                             claras, contexto relevante y parámetros definidos para influir en la respuesta del modelo, asegurando coherencia, 
+                             precisión y adecuación al propósito del usuario. En el contexto de la </trong>IA generativa de textos</strong>, un 
+                             prompt bien formulado optimiza la interpretación del lenguaje por parte del modelo y maximiza la calidad de la 
+                             salida generada, permitiendo desde la creación de texto estructurado hasta respuestas adaptadas a diferentes estilos 
+                             y objetivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+            </div>
+        </div>
+
+
+
+        <!-- Sección 2: Los 5 Pasos -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="section-title h2">
+                    <i class="fas fa-cogs me-2"></i>
+                    Los 5 Pasos para Crear Prompts Efectivos
+                </h2>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3">1</div>
+                                <div>
+                                    <h4 class="subtitle mb-1"><i class="fas fa-bullseye me-2"></i>Define el Objetivo</h4>
+                                </div>
+                            </div>
+                            <ul class="text-content mb-0">
+                                <li>¿Qué quiero aprender exactamente?</li>
+                                <li>¿Qué formato necesito?</li>
+                                <li>¿Para estudiar, practicar o comprender?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3">2</div>
+                                <div>
+                                    <h4 class="subtitle mb-1"><i class="fas fa-users me-2"></i>Conoce tu Audiencia</h4>
+                                </div>
+                            </div>
+                            <ul class="text-content mb-0">
+                                <li>¿Para quién es la información?</li>
+                                <li>¿Qué nivel de profundidad necesito?</li>
+                                <li>¿Principiante, intermedio o avanzado?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3">3</div>
+                                <div>
+                                    <h4 class="subtitle mb-1"><i class="fas fa-volume-up me-2"></i>Elige el Tono</h4>
+                                </div>
+                            </div>
+                            <ul class="text-content mb-0">
+                                <li>¿Cómo quiero que suene?</li>
+                                <li>¿Formal, amigable, técnico?</li>
+                                <li>¿Qué personalidad debe tener?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="step-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3">4</div>
+                                <div>
+                                    <h4 class="subtitle mb-1"><i class="fas fa-puzzle-piece me-2"></i>Proporciona Contexto</h4>
+                                </div>
+                            </div>
+                            <ul class="text-content mb-0">
+                                <li>¿Qué antecedentes necesita la IA?</li>
+                                <li>¿Qué ya sé y qué no entiendo?</li>
+                                <li>¿En qué disciplina lo aplico?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+                        <div class="step-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="step-number me-3">5</div>
+                                <div>
+                                    <h4 class="subtitle mb-1"><i class="fas fa-pencil-alt me-2"></i>Sé Específico</h4>
+                                </div>
+                            </div>
+                            <ul class="text-content mb-0">
+                                <li>¿Estoy pidiendo exactamente lo que quiero?</li>
+                                <li>¿Puede malinterpretarse mi solicitud?</li>
+                                <li>¿Puedo ser más preciso y concreto?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        
+        <!-- Sección 3: PROMPTS DE ESTUDIOS -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="section-title h2">
+                    <!--<i class="fas fa-chart-line me-2"></i>-->
+                    💡 Guía de preguntas para mejorar tus prompts de estudio
+                </h2>
+           <!-- <div class="section-divider my-4"></div>-->
+                <div id="carouselPromptTips" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                        <div class="p-4 bg-dark text-white rounded">
+                            <h5>🌱 Para iniciar en un tema</h5>
+                            <ul>
+                                <li>¿Qué significa este concepto? ¿En qué se usa?</li>
+                                <li>¿Cuál es la diferencia entre estos dos términos?</li>
+                                <li>¿Me puedes dar una explicación sencilla como para principiantes?</li>
+                                <li>¿Qué ejemplos concretos hay de esto en la vida real?</li>
+                                <li>¿Cuál es la historia o el origen de este concepto?</li>
+                        </ul>
+                        </div>
+                        </div>
+
+                        <div class="carousel-item">
+                        <div class="p-4 bg-dark text-white rounded">
+                            <h5>🧩 Para profundizar en un tema</h5>
+                            <ul>
+                                <li>¿Cómo se relaciona este tema con otros que ya conozco?</li>
+                                <li>¿Qué variantes o enfoques distintos existen?</li>
+                                <li>¿Qué errores comunes cometen los estudiantes al estudiar esto?</li>
+                                <li>¿Cómo puedo identificar si entendí bien este concepto?</li>
+                                <li>¿Qué autores o investigaciones clave debo conocer?</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <div class="carousel-item">
+                        <div class="p-4 bg-dark text-white rounded">
+                         <h5>📊 Para estudiar técnicas, métodos o herramientas</h5>
+                         <ul>
+                            <li>¿Cuáles son los pasos para aplicar esta técnica?</li>
+                            <li>¿Me puedes mostrar un ejemplo completo paso a paso?</li>
+                            <li>¿Qué diferencias hay entre los principales métodos existentes?</li>
+                            <li>¿Cuál método me conviene según el contexto que te doy?</li>
+                            <li>¿Cómo se ve esto en código o en una hoja de cálculo?</li>
+                         </ul>
+                        </div>
+                        </div>
+
+                        <div class="carousel-item">
+                        <div class="p-4 bg-dark text-white rounded">
+                        <h5>🧠 Para organizar el aprendizaje</h5>
+                        <ul>
+                            <li>¿Cómo puedo estructurar un plan de estudio para este tema?</li>
+                            <li>¿Qué preguntas de repaso o autoevaluación puedo usar?</li>
+                            <li>¿Me puedes hacer un quiz de 5 preguntas sobre esto?</li>
+                            <li>¿Cómo puedo explicarle esto a otra persona?</li>
+                            <li>¿Qué recursos (videos, libros, artículos) me recomiendas?</li>
+                        </ul>
+                        </div>
+                        </div>
+
+                        <div class="carousel-item">
+                        <div class="p-4 bg-dark text-white rounded">
+                         <h5>🧠 Prompt para ayudarte a encontrar tus dudas</h5>
+                            <p>
+                            Actúa como un tutor experto que me va a ayudar a identificar los temas que aún no entiendo bien. Hazme preguntas breves y revisa 
+                            mis respuestas para detectar brechas en mi comprensión. Luego dame sugerencias de qué prompts podría usar para profundizar.
+                            </p>
+                        </div>
+                        </div>
+
+    
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromptTips" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPromptTips" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
+
+            
+        <div class="section-divider"></div>
+
+        <!-- Sección 4: Ciencia de Datos -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="section-title h2">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Integración de la IA Generativa en el Estudio de Ciencia de Datos
+                </h2>
+            
+                <p class="text-content mb-4">
+                La inteligencia artificial generativa ha transformado la manera en que los estudiantes y profesionales de ciencia de datos pueden aprender, 
+                investigar y desarrollar soluciones. A través de <em>prompts</em> bien estructurados, es posible automatizar tareas clave, obtener 
+                explicaciones detalladas, generar código optimizado y validar resultados con documentación confiable. </p>
+<br>
+                    <h3 class="subtitle h4">
+                    <i class="fas fa-cogs me-2"></i>
+                        Prompts Avanzados para Ciencia de Datos
+                    </h3>
+                    <p class="text-content">
+                    Para aprovechar la IA generativa en este campo, podemos estructurar nuestros <em>prompts</em> mediante una <strong>fórmula especializada</strong>:
+                    </p>
+<br>
+                <!-- Fórmula Especializada -->
+                <div class="mb-5">
+                    <h3 class="subtitle h4 text-center mb-4">
+                        <i class="fas fa-calculator me-2"></i>
+                        Fórmula Especializada
+                    </h3>
+                    <div class="formula-box">
+                        [Problema] + [Contexto de datos] + [Librerías] + [Formato de salida]
+                    </div>
+                </div>
+                 <p class="text-content mt-3">
+                    Este esquema permite que los modelos generativos respondan de manera precisa y útil, proporcionando código, explicaciones o análisis con 
+                    base en el objetivo planteado. </p>
+ <br>
+ <br>               
+                <!-- Flujograma -->
+
+
+                <div class="mb-5">
+                    <h3 class="subtitle h4 text-center mb-4">
+                        <i class="fas fa-project-diagram me-2"></i>
+                        Flujograma de Trabajo
+                    </h3>
+                    <p class="text-content">
+                    Este flujo de trabajo muestra cómo integrar la IA en el proceso de aprendizaje y experimentación en ciencia de datos:
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-lg-2 col-md-4 col-6 mb-3">
+                            <div class="tech-card h-100">
+                                <i class="fas fa-download icon-large" style="color: var(--accent-blue);"></i>
+                                <h5 class="subtitle">Input</h5>
+                                <p class="text-content small">Identifica conceptos clave</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12 flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-3">
+                            <div class="tech-card h-100">
+                                <i class="fas fa-robot icon-large" style="color: var(--color-orange);"></i>
+                                <h5 class="subtitle">Prompt</h5>
+                                <p class="text-content small">Contexto técnico</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12 flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-3">
+                            <div class="tech-card h-100">
+                                <i class="fas fa-search icon-large" style="color: var(--accent-green);"></i>
+                                <h5 class="subtitle">Validación</h5>
+                                <p class="text-content small">Verificar con docs</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12 flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-3">
+                            <div class="tech-card h-100">
+                                <i class="fas fa-flask icon-large" style="color: var(--accent-purple);"></i>
+                                <h5 class="subtitle">Experimento</h5>
+                                <p class="text-content small">Dataset sintético</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-2 col-12 flow-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 mb-3">
+                            <div class="tech-card h-100">
+                                <i class="fas fa-clipboard-check icon-large" style="color: var(--color-orange);"></i>
+                                <h5 class="subtitle">Output</h5>
+                                <p class="text-content small">Notebook final</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<br>
+                <!-- Ejemplos flujograma aplicaso -->
+                    <h3 class="subtitle h4 mb-4 text-center">
+                        <i class="fas fa-chart-bar me-2"></i>📊 Ejemplo Aplicado: Visualización de Ventas por Categoría
+                    </h3>
+                    <p class="text-content text-center mb-5">
+                        Queremos generar un gráfico de barras que muestre la distribución de ventas por categoría de producto usando IA generativa.
+                    </p>
+
+                
+                  <!-- <div class="section-divider my-4"></div>-->
+                <div class="d-flex justify-content-between gap-2">
+                    <div class="card bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="fas fa-download icon-large" style="color: var(--accent-blue);"></i>
+                            <h5 class="subtitle">1️⃣ Input</h5>
+                            <p class="text-content small">Queremos analizar la distribución de ventas en diferentes categorías de productos usando un gráfico de barras.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="fas fa-robot icon-large" style="color: var(--color-orange);"></i>
+                            <h5 class="subtitle">2️⃣ Prompt</h5>
+                            <p class="text-content small">La IA recibe el prompt con contexto técnico: <br><em>“Genera un conjunto de datos sintético con ventas por categoría de 
+                                producto. Usa las categorías 'Electrónica', 'Ropa', 'Hogar' y 'Juguetes' con valores de ventas aleatorios. Luego,
+                                 crea un gráfico de barras utilizando Matplotlib en Python." </em></p>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="fas fa-search icon-large" style="color: var(--accent-green);"></i>
+                            <h5 class="subtitle">3️⃣ Validación</h5>
+                            <p class="text-content small">Antes de ejecutar el código, revisamos la documentación de Pandas y Matplotlib para asegurarnos de que los métodos de generación y
+                                 visualización sean correctos.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="fas fa-flask icon-large" style="color: var(--accent-purple);"></i>
+                            <h5 class="subtitle">4️⃣ Experimento</h5>
+                            <p class="text-content small">Se genera automáticamente el código Python para crear y visualizar los datos.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="fas fa-clipboard-check icon-large" style="color: var(--color-orange);"></i>
+                            <h5 class="subtitle">5️⃣ Output</h5>
+                            <p class="text-content small">El código se inserta en un Jupyter Notebook con visualización final.</p>
+                        </div>
+                    </div>
+        </div>
+
+<br>
+<br>
+                   
+
+                <!-- Ejemplos Prácticos -->
+                <div class="mb-5">
+                    <h3 class="subtitle h4 mb-4">
+                        <i class="fas fa-code me-2"></i>
+                        Ejemplos Prácticos
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="tech-card h-100">
+                                <h5><i class="fas fa-chart-bar me-2"></i>Visualización</h5>
+                                <div class="code-snippet">
+                                    matplotlib vs. seaborn para outliers en series temporales con código
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="tech-card h-100">
+                                <h5><i class="fas fa-brain me-2"></i>Modelos</h5>
+                                <div class="code-snippet">
+                                    Debug de Random Forest + recall bajo en clase minoritaria
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="tech-card h-100">
+                                <h5><i class="fas fa-calculator me-2"></i>Teoría</h5>
+                                <div class="code-snippet">
+                                    MSE vs. MAE con derivación matemática paso a paso
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Errores Comunes -->
+                <div class="mb-5">
+                    <h3 class="subtitle h4 mb-4">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Errores Comunes vs. Buenas Prácticas
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="example-box bad-example">
+                                <h5><i class="fas fa-times me-2"></i>Evita</h5>
+                                <ul class="mb-0">
+                                    <li>¿Cómo uso una red neuronal?</li>
+                                    <li>Confiar en código sin validar</li>
+                                    <li>Preguntas vagas y generales</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="example-box good-example">
+                                <h5><i class="fas fa-check me-2"></i>Mejor</h5>
+                                <ul class="mb-0">
+                                    <li>¿Cómo implementar MLP en keras para clasificar texto?</li>
+                                    <li>Probar snippets en entorno controlado</li>
+                                    <li>Especificar problema, datos y formato</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Sección de Recursos -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h2 class="section-title h2">
+                    <i class="fas fa-toolbox me-2"></i>
+                    Tu Kit de Herramientas
+                </h2>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="resource-card h-100">
+                            <i class="fas fa-magic icon-large"></i>
+                            <h4 class="subtitle">Prompt Maestro Universal</h4>
+                            <div class="code-snippet mt-3">
+                                Quiero aprender sobre [tema].<br>
+                                Explícamelo como si tuviera [nivel], usando tono [estilo].<br>
+                                Dame ejemplos en [contexto].<br>
+                                Hazme 3 preguntas y sugiere qué estudiar después.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="resource-card h-100">
+                            <i class="fas fa-search-plus icon-large"></i>
+                            <h4 class="subtitle">Identificar Dudas</h4>
+                            <p class="text-content">Actúa como tutor experto, hazme preguntas breves para detectar brechas en mi comprensión y sugiere prompts para profundizar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+        <!-- Footer -->
+        <div class="text-center py-5">
+            <div class="subtitle h5">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Aprender a escribir buenos prompts es aprender a <span class="highlight-text">pensar, preguntar y aprender</span> con más intención.
+            </div>
+        </div>
+        <footer class="bg-dark text-white text-center py-3">
+         Hecho con ❤️ por Adriana Ávalos Vargas | <a href="https://github.com/tuusuario" class="text-white" target="_blank">Mi GitHub</a>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
